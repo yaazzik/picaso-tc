@@ -29,7 +29,7 @@ const Comments = ({postId}: CommentsProps) => {
 
       {comments?.map(
         (comment) => (
-          <Card variant="outlined" sx={{
+          <Card key={comment.id} variant="outlined" sx={{
             p: 4,
             backgroundColor: 'black',
             border: '1px solid deeppink',
