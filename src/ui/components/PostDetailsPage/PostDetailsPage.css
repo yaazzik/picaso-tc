@@ -1,0 +1,33 @@
+.post-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    text-align: start;
+}
+
+h1 {
+    text-align: start;
+    color: deeppink;
+    font-family: Consolas !important;
+}
+
+h4 {
+    text-align: start;
+    color: white;
+    font-family: Consolas !important;
+}
+
+h6 {
+    text-align: start;
+    color: white;
+    font-family: Consolas !important;
+}
+
+.comment-email {
+    color: deeppink;
+    margin-left: 10px;
+}
+
+.comment-wrapper {
+}

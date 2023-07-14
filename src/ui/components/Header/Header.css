@@ -1,0 +1,13 @@
+.App-header {
+    font-family: 'Mexcellent', serif;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-text {
+    font-size: calc(60px + 2vmin);
+    margin: 10px;
+    color: deeppink;
+}
