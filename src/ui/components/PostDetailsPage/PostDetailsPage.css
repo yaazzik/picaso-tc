@@ -6,22 +6,10 @@
     text-align: start;
 }
 
-h1 {
+h1, h4, h6 {
     text-align: start;
     color: deeppink;
-    font-family: Consolas !important;
-}
-
-h4 {
-    text-align: start;
-    color: white;
-    font-family: Consolas !important;
-}
-
-h6 {
-    text-align: start;
-    color: white;
-    font-family: Consolas !important;
+    font-family: Consolas, serif !important;
 }
 
 .comment-email {

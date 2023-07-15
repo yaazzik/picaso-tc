@@ -14,21 +14,13 @@ const PostsPage = () => {
   const [selectedUserId, setSelectedUserId] = useState<string | undefined>(undefined);
 
   useEffect(() => {
-    !users && getUsers().then(
-      (res) => {
-        setUsers(res)
-      }
+    !users?.length && getUsers().then(
+      res => setUsers(res)
     );
     getPostsByUserId(selectedUserId).then(
       res => setPosts(res)
-    )
+    );
   },[selectedUserId])
-
-  useEffect(() => {
-
-    }
-    , [selectedUserId])
-
 
   const handleChange = useCallback((e: SelectChangeEvent) => {
     setSelectedUserId(e.target.value)
@@ -57,7 +49,12 @@ const PostsPage = () => {
             onChange={handleChange}
           >
             {users?.map((user) =>
-              (<MenuItem key={user.id} value={user.id}>{user.username}</MenuItem>)
+              (<MenuItem
+                key={user.id}
+                value={user.id}
+              >
+                {user.username}
+              </MenuItem>)
             )
             }
           </Select>
