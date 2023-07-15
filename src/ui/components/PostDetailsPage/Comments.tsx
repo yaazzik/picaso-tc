@@ -1,4 +1,4 @@
-import React, {FormEvent, MouseEventHandler, useCallback, useEffect, useState} from 'react';
+import React, {FormEvent, useCallback, useEffect, useState} from 'react';
 import {PostComment} from "../../../api/Comments/types";
 import {getCommentsByPostId} from "../../../api/Comments/getCommentsByPostId";
 import {Button, Card, Input, Typography} from "@mui/material";
