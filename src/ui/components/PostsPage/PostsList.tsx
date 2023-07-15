@@ -15,7 +15,10 @@ const PostsList = (props: PostsListProps) => {
 
       <div className='post-card-wrapper'>
         {posts?.map((post) => (
-          <Link to={`/post/${post.id}`}>
+          <Link
+            to={`/post/${post.id}`}
+            key={post.id}
+          >
             <div className='post-card'>
               <Card
                 variant='outlined'

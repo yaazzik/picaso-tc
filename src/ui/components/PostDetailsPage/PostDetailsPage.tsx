@@ -18,7 +18,7 @@ const PostDetailsPage = () => {
       .then
       ((postData) => {
         setPost(postData);
-        getUserById(postData!.id).then(
+        getUserById(postData?.userId).then(
           (userData) => {
             setUser(userData);
           });
@@ -33,7 +33,7 @@ const PostDetailsPage = () => {
       <Typography variant='h6' sx={{
         display: 'flex'
       }}>
-        {`@${user?.username}`}
+        {user?.username ? `@${user?.username}` : '@anonymous'}
         <div className='comment-email'>
           {user?.email}
         </div>
@@ -41,9 +41,9 @@ const PostDetailsPage = () => {
       <Typography variant='h4'>
         {post?.body}
       </Typography>
-      {post?.id && <Comments postId={post!.id} />}
+      {post?.id && <Comments postId={post.id} />}
       <Typography variant='h6'>
-        {`Also visit ${user?.website} by ${user?.name}`}
+        {user?.website && user?.name && `Also visit ${user?.website} by ${user?.name}`}
       </Typography>
     </div>
   );

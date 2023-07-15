@@ -9,9 +9,9 @@ import {getPostsByUserId} from "../../../api/Posts/getPostsByUserId";
 
 const PostsPage = () => {
 
-  const [posts, setPosts] = useState<Post[] | undefined>(undefined);
-  const [users, setUsers] = useState<User[] | undefined>(undefined);
-  const [selectedUserId, setSelectedUserId] = useState<string | undefined>(undefined);
+  const [posts, setPosts] = useState<Post[] | undefined>();
+  const [users, setUsers] = useState<User[] | undefined>();
+  const [selectedUserId, setSelectedUserId] = useState<string>('');
 
   useEffect(() => {
     !users?.length && getUsers().then(
@@ -32,7 +32,6 @@ const PostsPage = () => {
         <FormControl variant='standard' fullWidth>
           <InputLabel id="user-select-label">Users</InputLabel>
           <Select
-            placeholder='User name'
             sx={{
               fontFamily: 'Mexcellent, serif',
               color: 'white',

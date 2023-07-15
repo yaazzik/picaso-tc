@@ -1,6 +1,6 @@
 import { User } from "./types";
 
-export async function getUserById(id: number): Promise<User | undefined> {
+export async function getUserById(id: number | undefined): Promise<User | undefined> {
     try {
       if (id) {
         const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id.toString()}`)

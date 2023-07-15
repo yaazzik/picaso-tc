@@ -6,9 +6,15 @@
     text-align: start;
 }
 
-h1, h4, h6 {
+h1, h4 {
     text-align: start;
     color: deeppink;
+    font-family: Consolas, serif !important;
+}
+
+h6, input, button {
+    text-align: start;
+    color: white;
     font-family: Consolas, serif !important;
 }
 
@@ -17,5 +23,10 @@ h1, h4, h6 {
     margin-left: 10px;
 }
 
-.comment-wrapper {
+.add-comment {
+    display: flex;
+}
+.add-comment-form {
+    display: flex;
+    flex-direction: column;
 }
